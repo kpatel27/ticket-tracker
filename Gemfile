@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'pry-rails', :group => :development
+gem 'bourbon', '5.0.0.beta.8'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

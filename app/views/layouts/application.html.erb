@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <section class="container">
+      <nav class="main-nav">
+        <ul class="left">
+          <li><strong>Ticketing</strong></li>
+          <li><%= link_to 'Projects', projects_path %></li>
+        </ul>
+      </nav>
+    </section>
+
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><%= value %></div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
