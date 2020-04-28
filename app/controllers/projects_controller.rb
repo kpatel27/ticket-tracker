@@ -19,6 +19,7 @@ class ProjectsController < ApplicationController
       flash[:notice] = 'Project successfully created!'
       redirect_to project_path(@project)
     else
+      binding.pry
       render :new
     end
   end

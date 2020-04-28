@@ -1,20 +1,25 @@
 <h1>Projects</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @projects.each do |project| %>
+<% if @projects.empty? %>
+  <p>There are no projects!</p>
+<% else %>
+  <table>
+    <thead>
       <tr>
-        <td>
-          <strong><%= project.name %></strong>
-          <br/>
-          <%= project.description %>
-        </td>
+        <th>Name</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td>
+            <a href="/projects/<%= project.id %>"><strong><%= project.name %></strong></a>
+            <br/>
+            <%= project.description %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+<br/>
+<%= link_to 'Add Project', new_project_path %>
