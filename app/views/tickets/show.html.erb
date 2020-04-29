@@ -1,0 +1,7 @@
+<h1><%= @ticket.name %></h1>
+<h2><%= @ticket.body %></h2>
+<h3><%= @ticket.status %></h3>
+<div>
+  <%= link_to 'Edit', edit_ticket_path(@ticket) %>
+  <%= link_to 'Delete', @ticket, method: :delete, data: { confirm: 'Delete Ticket?' } %>
+</div>

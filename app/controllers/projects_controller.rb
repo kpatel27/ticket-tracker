@@ -19,7 +19,6 @@ class ProjectsController < ApplicationController
       flash[:notice] = 'Project successfully created!'
       redirect_to project_path(@project)
     else
-      binding.pry
       render :new
     end
   end
@@ -34,7 +33,6 @@ class ProjectsController < ApplicationController
       flash[:notice] = 'Project Successfuly Updated!'
       redirect_to project_path(@project)
     else
-      flash.now[:notice] = 'Name cannot be blank!'
       render :edit
     end
   end

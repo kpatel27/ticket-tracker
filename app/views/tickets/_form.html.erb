@@ -9,7 +9,7 @@
   </div>
 <% end %>
 
-<%= form_with model: @ticket do |f| %>
+<%= form_with model: @ticket do |form| %>
   <div class="field">
   <%= form.label :project %>
   <%= form.collection_select :project_id, Project.all, :id, :name, id: :ticket_project_id %>
@@ -27,6 +27,10 @@
 
   <div class="field">
   <%= form.label :status %>
-  <%= form.select :status, id: :ticket_status %>
+  <%= form.select :status, ['new', 'blocked', 'in_progress', 'fixed'], id: :ticket_status %>
+  </div>
+
+  <div class="submit">
+    <%= form.submit %>
   </div>
 <% end %>
