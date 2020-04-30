@@ -1,6 +1,18 @@
 <h1><%= @ticket.name %></h1>
-<h2><%= @ticket.body %></h2>
-<h3><%= @ticket.status %></h3>
+
+<p>
+  <%= @ticket.body %>
+</p>
+
+<h3>Status</h3>
+<p>
+  <%= @ticket.status %>
+</p>
+
+<h3>Tags</h3>
+<p>
+  <%= @ticket.tags.map(&:name).join(', ') %>
+</p>
 <div>
   <%= link_to 'Edit', edit_ticket_path(@ticket) %>
   <%= link_to 'Delete', @ticket, method: :delete, data: { confirm: 'Delete Ticket?' } %>

@@ -4,4 +4,6 @@ class Ticket < ApplicationRecord
   validates :project_id, presence: true
 
   belongs_to :project
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings
 end

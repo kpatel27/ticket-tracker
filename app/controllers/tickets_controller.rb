@@ -13,6 +13,7 @@ class TicketsController < ApplicationController
   end
 
   def create
+    binding.pry
     @ticket = Ticket.new(ticket_params)
     if @ticket.save
       flash[:notice] = 'Ticket successfully created!'
@@ -47,6 +48,6 @@ class TicketsController < ApplicationController
   end
 
   def ticket_params
-    params.require(:ticket).permit(:name, :body, :status, :project_id)
+    params.require(:ticket).permit(:name, :body, :status, :project_id, tag_ids: [])
   end
 end
