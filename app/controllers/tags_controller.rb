@@ -2,7 +2,7 @@ class TagsController < ApplicationController
   before_action :find_tag, only: [:edit, :update, :destroy]
 
   def index
-    @tag = Tag.all
+    @tags = Tag.all
   end
 
   def new
