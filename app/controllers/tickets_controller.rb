@@ -1,5 +1,6 @@
 class TicketsController < ApplicationController
   before_action :get_ticket, only: [:show, :edit, :update, :destroy]
+  before_action :require_session, except: [:index, :show]
 
   def index
     @tickets = Ticket.all
