@@ -35,3 +35,7 @@ curl \
   --data '["25ff984c-e79d-460c-a75f-489e58425656","67a702b9-1787-4c4b-bee2-b391806b803d"]'\
   http://localhost:5000/video
 ```
+
+### Example response
+
+`{"id": "6hf4984c-cg9d-8h0c-ag3f-h69e58fy5627"}`
