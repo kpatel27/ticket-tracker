@@ -9,11 +9,18 @@ The server will run on `http://localhost:5000/`.
 
 > `POST /flight/create`
 
-URL: `POST http://localhost:5000/video`
+### Create Posts Together
+
+URL: `POST http://localhost:5000/post`
 
 #### Request:
 
-| Field Name | Required | Description |
-| ---------- | -------- | ----------- |
-| Header     | Title    | Hi          |
-| Paragraph  | Text     | Ok          |
+| Field  | Required | Description                           |
+| ------ | -------- | ------------------------------------- |
+| post   | Yes      | Array of post ids for post to create  |
+
+#### Response:
+
+| Field | Description              |
+| ----- | ------------------------ |
+| id    | Id of newly created post |
