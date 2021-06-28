@@ -12,7 +12,7 @@ The server will run on `http://localhost:5000/`.
 
 #### Endpoint URL
 
-##### POST `http://localhost:5000/video`
+> `POST http://localhost:5000/video`
 
 #### Request JSON body
 
@@ -22,9 +22,9 @@ The server will run on `http://localhost:5000/`.
 
 #### Response
 
-| Type   | Description                                     |
-| ------ | ----------------------------------------------- |
-| Object | Object with `id` attribute of newly fused video |
+| Type   | Description               |
+| ------ | ------------------------- |
+| String | uuid of newly fused video |
 
 #### Example request
 
@@ -38,4 +38,38 @@ curl \
 
 ### Example response
 
-`{"id": "6hf4984c-cg9d-8h0c-ag3f-h69e58fy5627"}`
+```
+"6hf4984c-cg9d-8h0c-ag3f-h69e58fy5627"
+```
+
+### Get Fused Video
+
+#### Endpoint URL
+
+> `GET http://localhost:5000/video/:id`
+
+#### Request path parameter
+
+| Name | Required | Description             |
+| ---- | -------- | ----------------------- |
+| id   | Yes      | Id of the video to play |
+
+#### Response
+
+Returns binary data.
+
+Visiting the endpoint on a browser will play the video.
+
+#### Example request
+
+> `curl http://localhost:5000/video/6hf4984c-cg9d-8h0c-ag3f-h69e58fy5627 --output -`
+
+#### Example response
+
+```
+<binary data>
+```
+
+### Test
+
+Run `npm test` to run the Jest test suite
