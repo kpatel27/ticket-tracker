@@ -12,7 +12,7 @@ The server will run on `http://localhost:5000/`.
 
 #### Endpoint URL
 
-POST `http://localhost:5000/video`
+##### POST `http://localhost:5000/video`
 
 #### Request JSON body
 
