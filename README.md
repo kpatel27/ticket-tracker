@@ -17,7 +17,7 @@ URL: `POST http://localhost:5000/post`
 
 | Field  | Required | Description                           |
 | ------ | -------- | ------------------------------------- |
-| post   | Yes      | Array of post ids for post to create  |
+| post   | Yes      | Array of post ids for post to create. Must include multiple posts  |
 
 #### Response:
 
