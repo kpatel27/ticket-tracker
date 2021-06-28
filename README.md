@@ -1,32 +1,32 @@
-## Video Fuse REST API Documentation
+# Video Fuse REST API Documentation
 
 The Video Fuse API is used to fuse videos together and play newly fused videos in the browser.
 
-### Getting Started
+## Getting Started
 
 Run `npm start` from the root directory.
 
 The server will run on `http://localhost:5000/`.
 
-### Fuse Videos Together
+## Fuse Videos Together
 
-#### Endpoint URL
+### Endpoint URL
 
 > `POST http://localhost:5000/video`
 
-#### Request JSON body
+### Request JSON body
 
 | Type  | Required | Description                                                             |
 | ----- | -------- | ----------------------------------------------------------------------- |
 | Array | Yes      | Array of video ids for videos to fuse. Must include 2 or more video ids |
 
-#### Response
+### Response
 
 | Type   | Description               |
 | ------ | ------------------------- |
 | String | uuid of newly fused video |
 
-#### Example request
+### Example request
 
 ```
 curl \
@@ -42,34 +42,34 @@ curl \
 "6hf4984c-cg9d-8h0c-ag3f-h69e58fy5627"
 ```
 
-### Get Fused Video
+## Get Fused Video
 
-#### Endpoint URL
+### Endpoint URL
 
 > `GET http://localhost:5000/video/:id`
 
-#### Request path parameter
+### Request path parameter
 
 | Name | Required | Description             |
 | ---- | -------- | ----------------------- |
 | id   | Yes      | Id of the video to play |
 
-#### Response
+### Response
 
 Returns binary data.
 
 Visiting the endpoint on a browser will play the video.
 
-#### Example request
+### Example request
 
 > `curl http://localhost:5000/video/6hf4984c-cg9d-8h0c-ag3f-h69e58fy5627 --output -`
 
-#### Example response
+### Example response
 
 ```
 <binary data>
 ```
 
-### Test
+## Test
 
 Run `npm test` to run the Jest test suite
