@@ -8,25 +8,25 @@ Run `npm start` from the root directory.
 
 The server will run on `http://localhost:5000/`.
 
-A `merged_videos` directory will be created in the root directory where fused videos will be stored
+A `merged_videos` directory will be created in the root directory where fused videos will be stored.
 
 ## Fuse Videos Together
 
-Fuse 2 or more videos. Successfull requests will return the id of the newly fused video. The video will be stored in the `merged_videos` directory with a file name of
+Fuse 2 or more videos.
 
-```
-<id>.mp4
-```
+Successful requests will return the id of the newly fused video.
+
+The video will be stored in the `merged_videos` directory with a file name of `<id>.mp4`
 
 ### POST Endpoint URL
 
-> `http://localhost:5000/video`
+> `http://localhost:5000/video/fused`
 
 ### Request JSON body
 
-| Type  | Required | Description                                                       |
-| ----- | -------- | ----------------------------------------------------------------- |
-| Array | Yes      | Array of video ids for videos to fuse. Must include 2 or more ids |
+| Type  | Required | Description                                    |
+| ----- | -------- | ---------------------------------------------- |
+| Array | Yes      | Array of video ids. Must include 2 or more ids |
 
 ### Response
 
@@ -52,21 +52,21 @@ curl \
 
 ## Retrieve Fused Video
 
+Retrieve a fused video as a stream of binary data. Making a GET request on the browser will play the video.
+
 ### GET Endpoint URL
 
-> `http://localhost:5000/video/:id`
+> `http://localhost:5000/video/fused/:id`
 
 ### Request path parameter
 
-| Name | Required | Description             |
-| ---- | -------- | ----------------------- |
-| id   | Yes      | Id of the video to play |
+| Name | Required | Description                   |
+| ---- | -------- | ----------------------------- |
+| id   | Yes      | Id of the fused video to play |
 
 ### Response
 
-Returns binary data.
-
-Visiting the endpoint on a browser will play the video.
+<Binary Data>
 
 ### Example request
 
@@ -80,4 +80,4 @@ Visiting the endpoint on a browser will play the video.
 
 ## Test
 
-Run `npm test` to run the Jest test suite
+Run `npm test` to run the Jest test suites.
