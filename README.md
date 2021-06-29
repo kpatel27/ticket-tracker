@@ -1,6 +1,6 @@
 # Video Fuse REST API Documentation
 
-The Video Fuse API is used to fuse videos together and play newly fused videos in the browser.
+The Video Fuse API is used to fuse different videos together and to stream a fused video.
 
 ## Getting Started
 
@@ -10,9 +10,9 @@ The server will run on `http://localhost:5000/`.
 
 ## Fuse Videos Together
 
-### Endpoint URL
+### POST Endpoint URL
 
-> `POST http://localhost:5000/video`
+> POST `http://localhost:5000/video`
 
 ### Request JSON body
 
@@ -42,11 +42,11 @@ curl \
 "6hf4984c-cg9d-8h0c-ag3f-h69e58fy5627"
 ```
 
-## Get Fused Video
+## Retrieve Fused Video
 
-### Endpoint URL
+### GET Endpoint URL
 
-> `GET http://localhost:5000/video/:id`
+> `http://localhost:5000/video/:id`
 
 ### Request path parameter
 
