@@ -6,7 +6,7 @@ The Video Fuse API is used to fuse different videos together and to stream a fus
 
 Run `npm start` from the root directory.
 
-The server will run on `http://localhost:5000/`.
+The server will run on `http://localhost:5000`.
 
 A `merged_videos` directory will be created in the root directory where fused videos will be stored.
 
@@ -66,7 +66,7 @@ Retrieve a fused video as a stream of binary data. Making a GET request on the b
 
 ### Response
 
-<Binary Data>
+`<Binary Data>`
 
 ### Example request
 
