@@ -8,23 +8,31 @@ Run `npm start` from the root directory.
 
 The server will run on `http://localhost:5000/`.
 
+A `merged_videos` directory will be created in the root directory where fused videos will be stored
+
 ## Fuse Videos Together
+
+Fuse 2 or more videos. Successfull requests will return the id of the newly fused video. The video will be stored in the `merged_videos` directory with a file name of
+
+```
+<id>.mp4
+```
 
 ### POST Endpoint URL
 
-> POST `http://localhost:5000/video`
+> `http://localhost:5000/video`
 
 ### Request JSON body
 
-| Type  | Required | Description                                                             |
-| ----- | -------- | ----------------------------------------------------------------------- |
-| Array | Yes      | Array of video ids for videos to fuse. Must include 2 or more video ids |
+| Type  | Required | Description                                                       |
+| ----- | -------- | ----------------------------------------------------------------- |
+| Array | Yes      | Array of video ids for videos to fuse. Must include 2 or more ids |
 
 ### Response
 
-| Type   | Description               |
-| ------ | ------------------------- |
-| String | uuid of newly fused video |
+| Type   | Description             |
+| ------ | ----------------------- |
+| String | Id of newly fused video |
 
 ### Example request
 
